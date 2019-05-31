@@ -1,0 +1,143 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+.fix{
+	zoom:1;
+}
+.fix:after{
+	content: '';
+	height:0;
+	width: 0;
+	clear: both;
+	display:block;
+	overflow: hidden;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+
+/**公共蒙版**/
+.window-masking{
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:.5;
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:99;
+	display:none;
+}
+/**设置弹出框的位置和大小**/
+.success,.window-container{
+	width:78%;
+	background:#fff;
+	position:fixed;
+	top:30%;
+	left:50%;
+	margin-left:-39%;
+	z-index:100;
+	border-radius:4px;
+	overflow:hidden;
+	display:none;
+}
+/**弹出框提示内容**/
+.success .window-content,.window-container .window-content{
+	padding: 20px 5%;
+	border-bottom: 1px solid #bdbdbd;
+}
+/****弹出框内容提示文字**/
+.success p,.window-container .window-content p{
+	font-size:14px;
+	color:#676767;
+	line-height:24px;
+	text-align:center;
+}
+/**弹出框操作按钮**/
+.window-btn a{
+	display:block;
+	height:40px;
+	width:49%;
+	text-align:center;
+	line-height:40px;
+	font-size:16px;
+	font-weight:bold;
+	color:#363636;
+	display: none;
+}
+.window-btn a.cancel-button{
+	border-right: 1px solid #bdbdbd;
+}
+.window-btn a.confirm-button{
+	color:#d6a41f;
+}
+/**文字提示大标题**/
+.window-container h2{
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	color:#363636;
+	padding-top:22px;
+	display:none;
+}
+.window-btn .ack-button{
+	display:none;
+	height:40px;
+	width:100%;
+	text-align:center;
+	line-height:40px;
+	font-size:16px;
+	font-weight:bold;
+	color:#d6a41f;
+}
+.window-btn .ack-button:active{
+	background:#d6a41f;
+	color:#fff;
+}
+.jy-password{
+	width:90%;
+	height:34px;
+	display:block;
+	margin:20px auto 0;
+	padding:0 6px;
+}
+/**加载中蒙版**/
+.loading{
+	width:100%;
+	height:100%;
+	background:rgba(138,138,138,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index:99;
+	display:none;
+}
+.loading img{
+	display:block;
+	width:150px;
+	height:150px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-75px;
+	margin-top:-75px;
+}
+/***********媒体查询设置弹窗宽度************/
+@media only screen and (min-width: 568px) and (max-width: 1024px) {
+	.success,.window-container{width:100%;left: 50%;margin-left:-250px;max-width: 500px;top:20%;}
+}
+/***************公共弹窗部分结束***************/
+
+		
